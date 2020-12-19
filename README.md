@@ -19,24 +19,24 @@ OES(Online Event Supporter)
 
 ## 開発体制
 ### 役割分担
-バックエンド：山田純平、原田理央
-フロントエンド：前田祥、西村光陽
+- バックエンド：山田純平、原田理央
+- フロントエンド：前田祥、西村光陽
 
 ### オンライン開発における工夫した点
 - 情報共有:
 オンラインだと対面とは違い、細やかなコミュニケーションが取りづらいので、情報共有に気を使った。
 フロント側は動画を録って、バックエンド側はリファレンスを書いて、それぞれで進捗報告をわかりやすく表現できるようにした。
--難易度設定:
+- 難易度設定:
 私が一年生の時に行われた前回のハッカソンでは、ほぼ全員が全く知識のないまま開発でXamarinを使用した。そのせいで開発難易度が高くなってしまい、あまり開発を楽しむことができなかった。なので今回は、一年生も知識があるであろうProcessingを用いることで、開発難易度を下げ、理解し、楽しんでもらう開発を目指した。
 
 ## 開発技術(任意)
 ### 利用したプログラミング言語
--バックエンド：node.js
--フロントエンド：processing
+- バックエンド：node.js
+- フロントエンド：processing
 
 ### 利用したフレームワーク・ライブラリ
-バックエンド:express,firebase関連(firebase-tools,firebase-admin,realtime databaseなど)
-フロントエンド:HTTP-Requests-for-Processing,Swing
+- バックエンド:express,firebase関連(firebase-tools,firebase-admin,realtime databaseなど)
+- フロントエンド:HTTP-Requests-for-Processing,Swing
 
 ### その他開発に使用したツール
-Postman,VisualStudioCode
+- Postman,VisualStudioCode
