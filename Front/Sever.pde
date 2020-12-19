@@ -1,6 +1,4 @@
 import http.requests.*;
-int fl_log=0;
-String uid_store;
 String[] LoginUser(String name, String pass){
     PostRequest post = new PostRequest("https://us-central1-abcd-78830.cloudfunctions.net/app/account/login");
     post.addHeader("Content-Type", "application/json");
@@ -13,10 +11,6 @@ String[] LoginUser(String name, String pass){
     reArray[0] = response.getString("name");
     reArray[1] = response.getString("pass");
     reArray[2] = response.getString("uid");
-    if(reArray[2]!=null){
-    fl_log=1;
-    uid_store=reArray[2];
-    }
     return reArray;
   }
 String[] RegistUser(String name,String pass,String onlinegame,String trpg,String cardgame,String meeting,String presentation,String textchat){
@@ -39,7 +33,7 @@ String[] RegistEvent(String name,String useruid,String title,String year,String 
   post.addData("{\"name\":\"" +name+ "\",\"useruid\":\"" +useruid+ "\",\"title\":\"" +title+ "\",\"year\":\"" +year+ "\",\"month\":\"" +month+ "\",\"day\":\"" +day+ "\",\"hours\":\"" +hours+ "\",\"minutes\":\"" +minutes+ "\",\"url\":\"" +url+ "\",\"text\":\"" +text+ "\",\"category\":\"" +category+"\"}");
   post.send();
   String content = post.getContent();
-  //println(content);
+  println(content);
   JSONObject response = parseJSONObject(content);
   String[] reArray = new String[12];
   reArray[0] = response.getString("category");
@@ -49,7 +43,7 @@ String[] RegistEvent(String name,String useruid,String title,String year,String 
   reArray[4] = response.getString("title");
   reArray[5] = response.getString("uid");
   reArray[6] = response.getString("url");
-  reArray[7] = String.valueOf(response.getInt("year"));
+  reArray[7] = String.valueOf(response.getString ("year"));
   reArray[8] = String.valueOf(response.getString("month"));
   reArray[9] = String.valueOf(response.getString("day"));
   reArray[10] = String.valueOf(response.getString("hours"));
@@ -149,3 +143,8 @@ void Abema(){
   println(g);
   println("response: " + get.getContent());
 }
+
+//public void setup(){
+    //println(RegistEvent("jaja","-MOr8o-2nqqu8Fr7AL3n","kimyou","1","6","1","6","6","http/fafa","text!!","onlinegame"));
+    //println(RegistUser("koyo","koyokoyuyou","5","3","1","4","2","5"));
+//}
