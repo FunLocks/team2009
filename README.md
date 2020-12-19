@@ -18,6 +18,7 @@ OES(Online Event Supporter)
 - 自分でイベントを登録することもできる
 
 ### スクリーンショット(任意)
+![2020-12-19](https://user-images.githubusercontent.com/53861709/102676774-7c5fce80-41e2-11eb-904f-c88d17fc1f67.png)
 
 ## 開発体制
 ### 役割分担
