@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "events": {
+      ".read": true,
+      ".write": true,
+      "$event_id": {
+
+      }
+    },
+
+    "users": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["mail"],
+      "$user_id": {
+
+      }
+
+    }
+
+  }
+}
